@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Employee;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller {
     
     public function homeFunction() {
-        return view('pages.home');
+        $employees = Employee::all();
+        return view('pages.home', compact('employees'));
     }
     
 }
