@@ -1,0 +1,38 @@
+@import 'partials/mixin';
+@import 'partials/variables';
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: $nunito;
+}
+
+.layout {
+     height: $height;
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 100px 1fr 100px;
+     grid-template-areas: 
+          "head"
+          "main"
+          "foot";
+
+     header {
+          background-color: rgb(238, 137, 137);
+          grid-area: head;
+          @include flex; 
+     }
+
+     main {
+          background-color: rgb(145, 145, 238);
+          grid-area: main;
+          @include flex;
+     }
+
+     footer {
+          background-color: rgb(157, 204, 157);
+          grid-area: foot;
+          @include flex;
+     }
+}

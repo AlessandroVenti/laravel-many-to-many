@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "head" "main" "foot";
+}
+
+.layout header {
+  background-color: #ee8989;
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout main {
+  background-color: #9191ee;
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout footer {
+  background-color: #9dcc9d;
+  grid-area: foot;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
